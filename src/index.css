@@ -11,5 +11,10 @@
   font-size: 62.5%;
 
   --rocket-purple: hsl(262, 83%, 58%);
+  --blueish-white: hsl(213, 100%, 98%);
   --white: hsl(0, 0%, 100%);
+}
+
+.flex {
+  display: flex;
 }

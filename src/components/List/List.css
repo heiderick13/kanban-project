@@ -1,0 +1,23 @@
+.list {
+  height: 100%;
+  min-width: 375px;
+  padding: 2rem 1.5rem;
+}
+
+.list-header {
+  width: 100%;
+  min-height: 4rem;
+
+  margin-bottom: 2rem;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-btn {
+  color: var(--white);
+  background-color: var(--rocket-purple);
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.5rem;
+}
