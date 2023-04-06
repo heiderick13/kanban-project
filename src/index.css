@@ -9,4 +9,7 @@
   line-height: 1.5;
   font-weight: 400;
   font-size: 62.5%;
+
+  --rocket-purple: hsl(262, 83%, 58%);
+  --white: hsl(0, 0%, 100%);
 }
