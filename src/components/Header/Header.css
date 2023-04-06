@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--rocket-purple);
+  color: var(--white);
+
+  padding: 3rem 2rem;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
