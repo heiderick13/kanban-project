@@ -1,24 +1,19 @@
 import Card from "../Card/Card";
 import "./List.css";
 
-import { MdAdd } from "react-icons/md";
-
-function List({ name, button }) {
+function List({ name, tasks, todo }) {
   return (
     <div className="list">
       <div className="list-header flex">
         <h2 className="list-name">{name}</h2>
-        {button && (
-          <button className="add-btn">
-            <MdAdd size={24} color="#FEFEFE" />
-          </button>
-        )}
       </div>
-      <ul className="tasks">
-        <Card />
-        <Card />
-        <Card />
-      </ul>
+      {todo && (
+        <ul className="tasks">
+          {tasks.map((task) => {
+            return <Card key={task.id} content={task.name} />;
+          })}
+        </ul>
+      )}
     </div>
   );
 }

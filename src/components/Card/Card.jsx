@@ -1,13 +1,13 @@
 import "./Card.css";
 
-function Card() {
+function Card({ content }) {
   return (
-    <div className="card">
+    <div className="card" draggable="true">
       <div className="card-header">
         <div className="label"></div>
       </div>
       <div className="card-content">
-        <p>Ler livros</p>
+        <p>{content}</p>
       </div>
     </div>
   );

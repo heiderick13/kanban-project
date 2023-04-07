@@ -1,12 +1,12 @@
 import List from "../List/List";
 import "./Board.css";
 
-function Board() {
+function Board({ tasks }) {
   return (
     <div className="board flex">
-      <List name={"A Fazer"} button={true} />
-      <List name={"Fazendo"} />
-      <List name={"Feito"} />
+      <List tasks={tasks} name={"A Fazer"} todo={true} />
+      <List tasks={tasks} name={"Fazendo"} />
+      <List tasks={tasks} name={"Feito"} />
     </div>
   );
 }
