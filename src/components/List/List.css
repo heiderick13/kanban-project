@@ -10,7 +10,7 @@
 }
 
 .tasks {
-  max-height: 85%;
+  height: 85%;
   overflow-y: auto;
 }
 

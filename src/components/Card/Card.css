@@ -1,6 +1,7 @@
 .card {
   width: 100%;
-  box-shadow: 5px 5px 4px rgba(172, 187, 207, 0.8);
+  position: relative;
+  cursor: pointer;
 }
 
 .card + .card {
@@ -19,6 +20,20 @@
 
 .card-content {
   min-height: 7rem;
+  box-shadow: 5px 5px 4px rgba(172, 187, 207, 0.8);
+  background: var(--white);
   padding: 1.5rem;
   font-size: 1.2rem;
+}
+
+.card-content .icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.card-content:hover > .icon {
+  opacity: 0.8;
 }
