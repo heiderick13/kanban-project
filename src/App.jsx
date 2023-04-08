@@ -45,15 +45,15 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Minhas tarefas</h1>
-        <span className="icon">
-          <BiPencil />
-        </span>
+        <div className="head-title flex">
+          <h1>Minhas tarefas</h1>
+          <BiPencil className="icon" />
+        </div>
 
-        <form>
-          <input ref={taskNameRef} type="text" />
+        <form className="flex">
+          <input ref={taskNameRef} className="new-task" type="text" />
           <button onClick={handleAddTask} className="add-btn" type="submit">
-            <MdAdd size={24} color="#FEFEFE" />
+            <MdAdd size={24} color="#7c3bed" />
           </button>
         </form>
       </header>
