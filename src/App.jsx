@@ -20,6 +20,14 @@ function App() {
     taskNameRef.current.value = "";
   }
 
+  function handleDelete(e) {
+    e.preventDefault();
+
+    const updatedTasks = tasks.filter((task) => task.id !== task.id);
+    setTasks(updatedTasks);
+    localStorage.setItem("localTasks", JSON.stringify(updatedTasks));
+  }
+
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("localTasks"));
     if (savedTasks) setTasks(savedTasks);
@@ -44,7 +52,7 @@ function App() {
           </button>
         </form>
       </header>
-      <Board tasks={tasks} />
+      <Board tasks={tasks} handleDelete={handleDelete} />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import "./Card.css";
 
-function Card({ content }) {
+import { BsTrash3 } from "react-icons/bs";
+
+function Card({ content, handleDelete }) {
   return (
     <div className="card" draggable="true">
       <div className="card-header">
@@ -8,6 +10,9 @@ function Card({ content }) {
       </div>
       <div className="card-content">
         <p>{content}</p>
+        <span className="icon" onClick={handleDelete}>
+          <BsTrash3 />
+        </span>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import Card from "../Card/Card";
 import "./List.css";
 
-function List({ name, tasks, todo }) {
+function List({ name, tasks, todo, handleDelete }) {
   return (
     <div className="list">
       <div className="list-header flex">
@@ -10,7 +10,13 @@ function List({ name, tasks, todo }) {
       {todo && (
         <ul className="tasks">
           {tasks.map((task) => {
-            return <Card key={task.id} content={task.name} />;
+            return (
+              <Card
+                key={task.id}
+                content={task.name}
+                handleDelete={handleDelete}
+              />
+            );
           })}
         </ul>
       )}
