@@ -1,6 +1,5 @@
 .list {
   height: 100%;
-  max-height: 70vh;
   min-width: 350px;
   padding-inline: 1.5rem;
   margin-top: 2rem;
@@ -11,7 +10,7 @@
 }
 
 .tasks {
-  height: 90%;
+  max-height: 85%;
   overflow-y: auto;
 }
 

@@ -1,4 +1,5 @@
 .board {
   background-color: var(--blueish-white);
   height: calc(100vh - 90px);
+  flex-wrap: wrap;
 }
