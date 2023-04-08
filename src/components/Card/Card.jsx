@@ -2,17 +2,17 @@ import "./Card.css";
 
 import { BsTrash3 } from "react-icons/bs";
 
-function Card({ content, handleDelete }) {
+function Card({ id, content, handleDelete }) {
   return (
-    <div className="card" draggable="true">
+    <div id={id} className="card" draggable="true">
       <div className="card-header">
         <div className="label"></div>
       </div>
       <div className="card-content">
         <p>{content}</p>
-        <span className="icon" onClick={handleDelete}>
-          <BsTrash3 />
-        </span>
+        {/* <span className="icon" onClick={handleDelete}> */}
+        <BsTrash3 className="icon" onClick={handleDelete} />
+        {/* </span> */}
       </div>
     </div>
   );

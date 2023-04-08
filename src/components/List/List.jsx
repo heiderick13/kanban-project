@@ -12,6 +12,7 @@ function List({ name, tasks, todo, handleDelete }) {
           {tasks.map((task) => {
             return (
               <Card
+                id={task.id}
                 key={task.id}
                 content={task.name}
                 handleDelete={handleDelete}

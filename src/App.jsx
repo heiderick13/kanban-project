@@ -23,7 +23,12 @@ function App() {
   function handleDelete(e) {
     e.preventDefault();
 
-    const updatedTasks = tasks.filter((task) => task.id !== task.id);
+    const targetId = e.target.parentElement.parentElement.id;
+
+    const updatedTasks = tasks.filter((task) => task.id != targetId);
+    console.log(updatedTasks);
+    console.log(e.target.parentElement.parentElement.id);
+
     setTasks(updatedTasks);
     localStorage.setItem("localTasks", JSON.stringify(updatedTasks));
   }
