@@ -1,17 +1,33 @@
 import List from "../List/List";
 import "./Board.css";
 
-function Board({ tasks, handleDelete }) {
+function Board({
+  tasks,
+  currentTasks,
+  doneTasks,
+  handleDelete,
+  handleForwardTask,
+}) {
   return (
     <div className="board flex">
       <List
-        tasks={tasks}
+        array={tasks}
         name={"A Fazer"}
-        todo={true}
         handleDelete={handleDelete}
+        handleForwardTask={handleForwardTask}
       />
-      <List tasks={tasks} name={"Fazendo"} handleDelete={handleDelete} />
-      <List tasks={tasks} name={"Feito"} handleDelete={handleDelete} />
+      <List
+        array={currentTasks}
+        name={"Fazendo"}
+        handleDelete={handleDelete}
+        handleForwardTask={handleForwardTask}
+      />
+      <List
+        array={doneTasks}
+        name={"Feito"}
+        handleDelete={handleDelete}
+        handleForwardTask={handleForwardTask}
+      />
     </div>
   );
 }

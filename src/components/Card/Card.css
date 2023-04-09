@@ -28,7 +28,8 @@
 
 .card-content .icon {
   position: absolute;
-  right: 1rem;
+  font-size: 1.9rem;
+  right: 3rem;
   top: 50%;
   opacity: 0;
   transition: 0.2s;
@@ -36,4 +37,8 @@
 
 .card-content:hover > .icon {
   opacity: 0.8;
+}
+
+.icon.right {
+  right: 1rem;
 }

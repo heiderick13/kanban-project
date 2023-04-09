@@ -1,8 +1,9 @@
 import "./Card.css";
 
 import { BsTrash3 } from "react-icons/bs";
+import { MdOutlineArrowCircleRight } from "react-icons/md";
 
-function Card({ id, content, handleDelete }) {
+function Card({ id, content, status, handleDelete, handleForwardTask }) {
   return (
     <div id={id} className="card" draggable="true">
       <div className="card-header">
@@ -10,9 +11,12 @@ function Card({ id, content, handleDelete }) {
       </div>
       <div className="card-content">
         <p>{content}</p>
-        {/* <span className="icon" onClick={handleDelete}> */}
+        <MdOutlineArrowCircleRight
+          id={status}
+          className="icon right"
+          onClick={handleForwardTask}
+        />
         <BsTrash3 className="icon" onClick={handleDelete} />
-        {/* </span> */}
       </div>
     </div>
   );
