@@ -46,16 +46,17 @@ function App() {
 
     const targetStatus = e.target.id;
     const targetId = e.target.parentElement.parentElement.id;
-    // console.log(targetStatus);
-
+    const forwardedTask = tasks.filter((task) => task.id != targetStatus);
     const updatedTasks = tasks.filter((task) => task.id != targetId);
-    const forwardedTask = tasks.filter((task) => task.id == targetId);
-    // console.log(forwardedTasks);
 
-    setTasks(updatedTasks);
-    setCurrentTasks(forwardedTasks);
-    console.log(currentTasks);
-    // localStorage.setItem("localTasks", JSON.stringify(forwardedTasks));
+    if (targetStatus === "todo") {
+      setCurrentTasks((prev) => {
+        return [...prev, forwardedTask];
+      });
+      setTasks(updatedTasks);
+    }
+
+    // targetStatus.setAttribute("id", "inProgress");
   }
 
   useEffect(() => {
